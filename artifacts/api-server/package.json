@@ -1,0 +1,17 @@
+{
+  "name": "api-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "esbuild": "^0.25.10",
+    "typescript": "^5.9.3"
+  }
+}
