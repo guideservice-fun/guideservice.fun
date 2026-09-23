@@ -1,8 +1,9 @@
-import { type Request, type Response } from 'express';
+import { Request, Response, Router } from 'express';
 
-/**
- * Reports whether the API process is available to accept requests.
- */
-export function health(_req: Request, res: Response): Response {
-  return res.json({ status: 'ok' });
-}
+const router = Router();
+
+router.get('/health', (_req: Request, res: Response) => {
+  res.status(200).json({ status: 'ok' });
+});
+
+export default router;

@@ -1,10 +1,10 @@
 import express from 'express';
 
-import { health } from './routes/health.js';
+import healthRouter from './routes/health.js';
 
 const app = express();
 
-app.get('/health', health);
+app.use(healthRouter);
 
 const port = Number(process.env.PORT ?? 3000);
 
